@@ -20,8 +20,7 @@ router = APIRouter(
 @router.post('/table', response_model=None)
 async def table_layout_parser(
 	images: List[UploadFile],
-	model: ModelChoice = Form(ModelChoice.fasterrcnn),
-	dilate: bool = Form(False),
+	model: ModelChoice = Form(ModelChoice.fasterrcnn)
 	):
 	"""
 	API endpoint for calling the layout parser
